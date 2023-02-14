@@ -13,10 +13,10 @@ body {
 	flex-wrap: wrap;
 }
 
-.row > .column1 {
+.row > #column1 {
 	width: 60%;
 }
-.row > .column2 {
+.row > #column2 {
 	wdith: 40%;
 }
 
@@ -24,6 +24,11 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	flex: 1;
+}
+
+.column {
+	flex: 1;
+	flex-grow: 1;
 }
 
 #frame {
@@ -36,12 +41,15 @@ line {
 	stroke-width: 5;
 }
 
-/*
+
+circle:hover {
+	fill: deepskyblue;
+}
+
+.borderChange {
+    border-color: orange;
+}
+
 circle {
 	fill: blue;
-}
-*/
-
-.circle1:hover {
-	fill: yellow;
 }

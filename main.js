@@ -1,30 +1,43 @@
-/*
-function submitClicked() {
-	let vals = document.getElementsByTagName("input");
 
-	//console.log(vals.length);
+function xValsClicked() {
+ let xvals = document.getElementById("x-coord");
+ console.log(xvals.value);
 
-	for (let i = 0; i < vals.length; i++) {
-		if(vals[i].checked) {
-			//console.log(vals[i].value); //resolves to either bar/line chart
+}
+document.getElementById("x-coord").addEventListener('change', xValsClicked);
 
-			let newText = "Selected Vis: " + vals[i].value;
-			document.getElementById("selected-vis").innerHTML = newText;
-		}
-	}
+
+function yValsClicked() {
+ let yvals = document.getElementById("y-coord");
+ console.log(yvals.value);
+
+}
+document.getElementById("y-coord").addEventListener('change', yValsClicked);
+
+function createNewPoint () {
+	let x = xValsClicked;
+	let y = yValsClicked;
+
+	let xPlot = (30 * x) + 100;
+	let yPlot = 300 - (30 * y);
+
+	let point = document.getElementById
+
 }
 
-document.getElementById("subButton").addEventListener('click', submitClicked);
-*/
+document.getElementById("subBotton").addEventListener('click', createNewPoint);
 
-function circleHover() {
-	let maxPt = document.getElementById("circle1");
 
-	maxPt.classList.add("orange");
+function submit2Clicked() {
+    let maxPnt = document.getElementById("circle1"); 
+    
+    maxPnt.classList.add("borderChange"); // also check out remove() and toggle() 
 }
 
-document.getElementById("circle1").addEventListener('click', circleHover);
+// Add event handler to button 
+document.getElementById("circle1").addEventListener('click', submit2Clicked);
 
+function clickButton() {
 
-
+}
 

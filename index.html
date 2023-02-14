@@ -15,28 +15,55 @@
 
     <div class="flexbox">
             <div class="row">
-                <div class="column1"> 
+                <div class="column" id="column1"> 
                     <svg id="frame">
                         <line x1="100" y1="0" x2="100" y2="300"/>
                         <line x1="100" y1="300" x2="400" y2="300"/>
 
-                        <circle class="circle1" cx="130" cy="240" r="10"/>
+                        <circle id="circle1" cx="130" cy="240" r="10"/>
                     
-                        <circle cx="160" cy="180" r="10"/>
+                        <circle id="circle1" cx="160" cy="180" r="10"/>
                   
-                        <circle cx="280" cy="240" r="10"/>
+                        <circle id="circle1" cx="280" cy="240" r="10"/>
                       
-                        <circle cx="370" cy="30" r="10"/>
+                        <circle id="circle1" cx="370" cy="30" r="10"/>
           
                     </svg>
                 </div>
-                <div class="column2">
-                   <h3>test2</h3>
+
+                <div class="column" id="column2">
+                   <div id="button-div"> </div>
+
+                   <label for="x-coord">Select the x coordinate for the point you want to add.</label>
+                   <select name="x-coord" id="x-coord">
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                        <option value=6>6</option>
+                        <option value=7>7</option>
+                        <option value=8>8</option>
+                        <option value=9>9</option>
+                    </select>
+                    <br>
+                    <label for="y-coord">Select the y coordinate for the point you want to add.</label>
+                    <select name="y-coord" id="y-coord">
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                        <option value=6>6</option>
+                        <option value=7>7</option>
+                        <option value=8>8</option>
+                        <option value=9>9</option>
+                    </select>
+                    <br>
+                    <button type="button" id="subBotton" onclick="clickButton()">Add Point</button>
                 </div>
             </div>
-            <div class="row">
 
-            </div>
     </div>
 
 
