@@ -46,10 +46,11 @@ circle:hover {
 	fill: deepskyblue;
 }
 
-.borderChange {
-    border-color: orange;
+
+circle:active {
+	fill: darkorange;
 }
 
-circle {
-	fill: blue;
+circle:visited {
+	color: darkorange;
 }

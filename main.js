@@ -1,22 +1,23 @@
+function submitClicked() {
 
-function xValsClicked() {
- let xvals = document.getElementById("x-coord");
- console.log(xvals.value);
+	// getting a selected x value 
+	let xvals = document.getElementById("x-coord");
+ 	let xselected = xvals.options[xvals.selectedIndex].value;
+// document.getElementById("x-coord").addEventListener('change', xValsClicked);
 
+
+	// getting a selected y value
+ 	let yvals = document.getElementById("y-coord");
+ 	let yselected = yvals.options[yvals.selectedIndex].value;
+
+	// calling function to create new point 
+	createNewPoint(xselected,yselected);
 }
-document.getElementById("x-coord").addEventListener('change', xValsClicked);
 
 
-function yValsClicked() {
- let yvals = document.getElementById("y-coord");
- console.log(yvals.value);
-
-}
-document.getElementById("y-coord").addEventListener('change', yValsClicked);
+// document.getElementById("y-coord").addEventListener('change', yValsClicked);
 
 function createNewPoint () {
-	let x = xValsClicked;
-	let y = yValsClicked;
 
 	let xPlot = (30 * x) + 100;
 	let yPlot = 300 - (30 * y);
@@ -26,6 +27,10 @@ function createNewPoint () {
 }
 
 document.getElementById("subBotton").addEventListener('click', createNewPoint);
+
+
+
+
 
 
 function submit2Clicked() {
