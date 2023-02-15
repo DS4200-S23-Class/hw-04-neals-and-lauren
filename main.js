@@ -33,7 +33,7 @@ function createNewPoint(x, y) {
 
 }
 
-document.getElementById("subBotton").addEventListener('click', clickButton);
+document.getElementById("subButton").addEventListener('click', clickButton);
 
 
 function clickPoint(id) {
@@ -51,7 +51,7 @@ function clickPoint(id) {
 	if (point.classList.contains("circleBorder")) {
 		point.classList.remove("circleBorder");
 	} else {
-		point.classList.add("circleBorder");
+		point.classList.toggle("circleBorder");
 	}
 }
 
