@@ -14,8 +14,6 @@ function clickButton() {
 	createNewPoint(xselected,yselected);
 }
 
-// document.getElementById("y-coord").addEventListener('change', yValsClicked);
-
 function createNewPoint(x, y) {
 	let xPlot = (30 * x) + 100;
 	let yPlot = 300 - (30 * y);
@@ -29,9 +27,9 @@ function createNewPoint(x, y) {
 
 	let id = "(" + x + "," + y + ")";
 	point.setAttribute("id", id);
+	point.setAttribute("onclick", 'clickPoint(id)');
 
 	frame.appendChild(point);
-	//point.addEventListener("click", () => pointClick(point.id));
 
 }
 
@@ -41,16 +39,20 @@ document.getElementById("subBotton").addEventListener('click', clickButton);
 function clickPoint(id) {
 	let point = document.getElementById(id);
 
+	let newText = id;
+	let lastPoint = document.getElementById("button-div");
 
+	lastPoint.innerHTML = newText;
+
+	console.log("textChanged");
+
+	// add border 
+
+	if (point.classList.contains("circleBorder")) {
+		point.classList.remove("circleBorder");
+	} else {
+		point.classList.add("circleBorder");
+	}
 }
-
-function submit2Clicked() {
-    let maxPnt = document.getElementById("circle1"); 
-    
-    maxPnt.classList.add("borderChange"); // also check out remove() and toggle() 
-}
-
-// Add event handler to button 
-//document.getElementById("circle1").addEventListener('click', submit2Clicked);
 
 

@@ -20,22 +20,23 @@
                         <line x1="100" y1="0" x2="100" y2="300"/>
                         <line x1="100" y1="300" x2="400" y2="300"/>
 
-                        <circle id="(1,2)" cx="130" cy="240" r="10"/>
+                        <circle id="(1,2)" cx="130" cy="240" r="10" onclick='clickPoint("(1,2)")'/>
                     
-                        <circle id="(2,4)" cx="160" cy="180" r="10"/>
+                        <circle id="(2,4)" cx="160" cy="180" r="10" onclick='clickPoint("(2,4)")'/>
                   
-                        <circle id="(6,2)" cx="280" cy="240" r="10"/>
+                        <circle id="(6,2)" cx="280" cy="240" r="10" onclick='clickPoint("(6,2)")'/>
                       
-                        <circle id="(9,9)" cx="370" cy="30" r="10"/>
+                        <circle id="(9,9)" cx="370" cy="30" r="10" onclick='clickPoint("(9,9)")'/>
           
                     </svg>
                 </div>
 
                 <div class="column" id="column2">
-                   <div id="button-div"> </div>
+                    <p>Last Point Clicked: </p>
+                    <div id="button-div"> </div>
                     <form id="cord_select">
-                   <label for="x-coord">Select the x coordinate for the point you want to add.</label>
-                   <select name="x-coord" id="x-coord">
+                    <label for="x-coord">Select the x coordinate for the point you want to add.</label>
+                    <select name="x-coord" id="x-coord">
                         <option value=1>1</option>
                         <option value=2>2</option>
                         <option value=3>3</option>
@@ -64,6 +65,20 @@
                     <button type="button" id="subBotton" onclick="clickButton()">Add Point</button>
                 </div>
             </div>
+
+    <div>
+        <div id="Acknowledgements">
+        <h2 id="ack-header">Acknowledgements</h3>
+         <ul>
+            <li>https://www.w3schools.com/css/default.asp</li>
+            <li>https://www.geeksforgeeks.org/html-introduction/?ref=lbp</li>
+            <li>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
+            <li>https://www.w3schools.com/html/default.asp</li>
+            <li>https://www.geeksforgeeks.org/html-tags-a-to-z-list/?ref=lbp</li>
+            <li>https://www.w3schools.com/graphics/svg_intro.asp</li>
+            <li>http://www.w3.org/2000/svg</li>
+        </ul>
+    </div>
 
     </div>
 
