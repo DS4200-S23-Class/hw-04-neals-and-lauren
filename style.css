@@ -48,7 +48,8 @@ circle:hover {
 
 
 circle:active {
-	fill: darkorange;
+	stroke: darkorange;
+	stroke-width: 5px;
 }
 
 circle:visited {

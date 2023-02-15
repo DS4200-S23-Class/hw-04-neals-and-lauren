@@ -1,4 +1,4 @@
-function submitClicked() {
+function clickButton() {
 
 	// getting a selected x value 
 	let xvals = document.getElementById("x-coord");
@@ -14,24 +14,35 @@ function submitClicked() {
 	createNewPoint(xselected,yselected);
 }
 
-
 // document.getElementById("y-coord").addEventListener('change', yValsClicked);
 
-function createNewPoint () {
-
+function createNewPoint(x, y) {
 	let xPlot = (30 * x) + 100;
 	let yPlot = 300 - (30 * y);
 
-	let point = document.getElementById
+	let frame = document.getElementById("frame");
+
+	let point = document.createElementNS("http://www.w3.org/2000/svg", "circle")
+	point.setAttribute("cx", xPlot);
+	point.setAttribute("cy", yPlot);
+	point.setAttribute("r", "10");
+
+	let id = "(" + x + "," + y + ")";
+	point.setAttribute("id", id);
+
+	frame.appendChild(point);
+	//point.addEventListener("click", () => pointClick(point.id));
 
 }
 
-document.getElementById("subBotton").addEventListener('click', createNewPoint);
+document.getElementById("subBotton").addEventListener('click', clickButton);
 
 
+function clickPoint(id) {
+	let point = document.getElementById(id);
 
 
-
+}
 
 function submit2Clicked() {
     let maxPnt = document.getElementById("circle1"); 
@@ -40,9 +51,6 @@ function submit2Clicked() {
 }
 
 // Add event handler to button 
-document.getElementById("circle1").addEventListener('click', submit2Clicked);
+//document.getElementById("circle1").addEventListener('click', submit2Clicked);
 
-function clickButton() {
-
-}
 
